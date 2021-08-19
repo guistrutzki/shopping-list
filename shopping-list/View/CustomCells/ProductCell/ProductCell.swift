@@ -1,5 +1,5 @@
 //
-//  ShoppingItemCell.swift
+//  ProductCell.swift
 //  shopping-list
 //
 //  Created by Guilherme Strutzki on 17/08/21.
@@ -7,12 +7,18 @@
 
 import UIKit
 
-class ShoppingItemCell: UITableViewCell {
+class ProductCell: UITableViewCell {
     
     @IBOutlet weak var productAvatar: UIImageView!
     @IBOutlet weak var productLabel: UILabel!
     
-    static let identifier = "ShoppingItemCell"
+    static let identifier = "ProductCell"
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.selectionStyle = .none
+    }
 
     func setupCell(product: Product) {
         self.productLabel.text = product.name

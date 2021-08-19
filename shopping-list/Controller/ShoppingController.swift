@@ -5,14 +5,10 @@
 //  Created by Guilherme Strutzki on 17/08/21.
 //
 
-protocol ShoppingControllerDelegate: AnyObject {
-    func handleShoppingItemTapped(name: String)
-}
+import UIKit
 
 class ShoppingController {
     private var products = [Product]()
-    
-    weak var delegate: ShoppingControllerDelegate?
     
     func addProduct(_ name: String) {
         if (name.isEmpty) { return }
@@ -30,6 +26,17 @@ class ShoppingController {
     
     func getProductsCount() -> Int {
         return self.products.count
+    }
+    
+    func updateProductAvatar(index: Int, image: UIImage) {
+        let currentProduct = self.products[index]
+        let updatedProduct = Product(name: currentProduct.name, image: image)
+        
+        self.products[index] = updatedProduct
+    }
+    
+    func removeProduct(index: Int) {
+        self.products.remove(at: index)
     }
     
 }
