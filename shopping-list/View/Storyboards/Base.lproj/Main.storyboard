@@ -22,6 +22,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCh-bh-gxj">
                                         <rect key="frame" x="364" y="60" width="30" height="30"/>
                                         <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="didTappedAddProduct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ryj-xU-Qpa"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lista de Compras" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPB-0q-ofj">
                                         <rect key="frame" x="140" y="64.5" width="134" height="21"/>
@@ -40,15 +43,26 @@
                                     <constraint firstItem="cPB-0q-ofj" firstAttribute="centerX" secondItem="53v-H7-tf9" secondAttribute="centerX" id="xAe-vJ-uk6"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XpG-Wi-4FZ">
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XpG-Wi-4FZ" secondAttribute="bottom" id="52g-9O-az5"/>
                             <constraint firstItem="53v-H7-tf9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JC8-o9-d8g"/>
                             <constraint firstAttribute="trailing" secondItem="53v-H7-tf9" secondAttribute="trailing" id="QkI-8k-ODf"/>
                             <constraint firstItem="53v-H7-tf9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TZh-eZ-3Q4"/>
+                            <constraint firstItem="XpG-Wi-4FZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YhF-Lb-a2Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XpG-Wi-4FZ" secondAttribute="trailing" id="oOq-0o-S1y"/>
+                            <constraint firstItem="XpG-Wi-4FZ" firstAttribute="top" secondItem="53v-H7-tf9" secondAttribute="bottom" id="ygy-pF-sS2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="XpG-Wi-4FZ" id="2X2-Rv-Fe9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

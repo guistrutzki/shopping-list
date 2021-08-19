@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="ShoppingItemCell" customModule="shopping_list" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="ShoppingItemCell" customModule="shopping_list" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="371" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOs-pw-zDw">
+                        <rect key="frame" x="0.0" y="0.0" width="371" height="70"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brand-identity.png" translatesAutoresizingMaskIntoConstraints="NO" id="eDl-0m-85x">
+                                <rect key="frame" x="10" y="5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="42y-jm-8Nn"/>
+                                    <constraint firstAttribute="width" constant="60" id="sD4-hr-Pve"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TO-sQ-9JR">
+                                <rect key="frame" x="90" y="25" width="45.5" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eDl-0m-85x" firstAttribute="leading" secondItem="IOs-pw-zDw" secondAttribute="leading" constant="10" id="HUe-BO-LtX"/>
+                            <constraint firstItem="0TO-sQ-9JR" firstAttribute="top" secondItem="IOs-pw-zDw" secondAttribute="top" constant="25" id="KF2-Ib-JDM"/>
+                            <constraint firstItem="eDl-0m-85x" firstAttribute="centerY" secondItem="IOs-pw-zDw" secondAttribute="centerY" id="YZD-D1-03K"/>
+                            <constraint firstItem="0TO-sQ-9JR" firstAttribute="centerY" secondItem="eDl-0m-85x" secondAttribute="centerY" id="bAm-gZ-vcS"/>
+                            <constraint firstAttribute="height" constant="70" id="nvv-ec-rBi"/>
+                            <constraint firstItem="0TO-sQ-9JR" firstAttribute="leading" secondItem="eDl-0m-85x" secondAttribute="trailing" constant="20" id="v6d-Xa-mef"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IOs-pw-zDw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8DN-pm-UrH"/>
+                    <constraint firstAttribute="bottom" secondItem="IOs-pw-zDw" secondAttribute="bottom" id="McU-me-AZg"/>
+                    <constraint firstAttribute="trailing" secondItem="IOs-pw-zDw" secondAttribute="trailing" id="RkH-oM-e6W"/>
+                    <constraint firstItem="IOs-pw-zDw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cA5-UW-kUa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="productAvatar" destination="eDl-0m-85x" id="Q8O-nn-3Cu"/>
+                <outlet property="productLabel" destination="0TO-sQ-9JR" id="67j-Th-iwp"/>
+            </connections>
+            <point key="canvasLocation" x="217" y="122"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="brand-identity.png" width="384" height="384"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
